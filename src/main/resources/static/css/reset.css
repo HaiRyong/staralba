@@ -1,0 +1,206 @@
+/* ==========================================================================
+   CSS RESET
+   ========================================================================== */
+
+/* noto-sans-kr-300 - korean */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/noto-sans-kr-v12-korean-300.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Light'), local('NotoSansKR-Light'),
+	url('../fonts/noto-sans-kr-v12-korean-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/noto-sans-kr-v12-korean-300.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../_public/fonts/noto-sans-kr-v12-korean-300.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/noto-sans-kr-v12-korean-300.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/noto-sans-kr-v12-korean-300.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-regular - korean */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal
+	font-weight: 400;
+	src: url('..fonts/noto-sans-kr-v12-korean-regular.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'),
+	url('../fonts/noto-sans-kr-v12-korean-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/noto-sans-kr-v12-korean-regular.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../fonts/noto-sans-kr-v12-korean-regular.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/noto-sans-kr-v12-korean-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/noto-sans-kr-v12-korean-regular.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-100 - korean */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 100;
+	src: url('../fonts/noto-sans-kr-v12-korean-100.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Thin'), local('NotoSansKR-Thin'),
+	url('../fonts/noto-sans-kr-v12-korean-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/noto-sans-kr-v12-korean-100.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../fonts/noto-sans-kr-v12-korean-100.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/noto-sans-kr-v12-korean-100.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/noto-sans-kr-v12-korean-100.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-500 - korean */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/_public/fonts/noto-sans-kr-v12-korean-500.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Medium'), local('NotoSansKR-Medium'),
+	url('../fonts/noto-sans-kr-v12-korean-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/noto-sans-kr-v12-korean-500.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../fonts/noto-sans-kr-v12-korean-500.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/noto-sans-kr-v12-korean-500.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/noto-sans-kr-v12-korean-500.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-700 - korean */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/noto-sans-kr-v12-korean-700.eot'); /* IE9 Compat Modes */
+	src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'),
+	url('../fonts/noto-sans-kr-v12-korean-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/noto-sans-kr-v12-korean-700.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../fonts/noto-sans-kr-v12-korean-700.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/noto-sans-kr-v12-korean-700.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/noto-sans-kr-v12-korean-700.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+
+
+html {
+
+}
+/* Correct `block` display not defined in IE 8/9. */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+/* elements */
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 320px;
+	font-size: 13px;
+	color: #222;
+	line-height: 1.42857;
+	-webkit-text-size-adjust: none;
+	-ms-interpolation-mode: bicubic;
+	font-family: 'Noto Sans KR', Helvetica Neue, Helvetica, Arial, sans-serif;
+	width: 100%;
+	font-weight: 400;
+	letter-spacing:-0.4px;
+	top: 0;
+	left: 0;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+li,
+dt,
+dd,
+input,
+textarea,
+button {
+	font-family: 'Noto Sans KR', Helvetica Neue, Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+img,
+video,
+audio,
+object,
+embed,
+iframe {
+	max-width: 100%;
+}
+img {
+	border: 0 none;
+	line-height: 0;
+	-ms-interpolation-mode: bicubic;
+	-webkit-image-rendering: optimizeQuality;
+}
+ul,
+ol,
+dl {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+form {
+	margin: 0;
+}
+table {
+	width:100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th,
+td {
+	padding: 0;
+}
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+	line-height: inherit;
+}
+input[type="text"],
+input[type="password"],
+input[type="reset"],
+input[type="submit"],
+input[type="tel"],
+input[type="number"],
+input[type="email"]{
+	font-size: 13px;
+	background: none;
+	border-radius: 0px;
+	border: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+i {
+	font-style: normal;
+	display: inline-block;
+}
+textarea {
+	overflow-y: auto;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+select{border:none;border-radius:0; -webkit-appearance: none;-webkit-border-radius: 0;}
+select::-ms-expand {
+	display: none;
+}
+em{font-style: normal;}
+button{border:none;padding:0;margin:0;cursor:pointer;}
+br{font-family:dotum;}
+address{font-style: normal;}
+
+::-webkit-scrollbar {width:8px;height:3px;background-color:rgba(137, 115, 88, 0.1);border-radius: 10px;}
+::-webkit-scrollbar-thumb {background-color:rgba(0, 0, 0, 0.1);}
