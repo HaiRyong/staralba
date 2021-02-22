@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{layouts/sub_layout}">
+<th:block layout:fragment="header">
+    <header>
+        <div class="header-wrap layout">
+            <a th:href="/" class="logo"><img src="../images/common/logo.svg" alt="staralba"></a>
+            <div class="search-wrap">
+                <div class="search-box">
+                    <div class="input-box">
+                        <input type="text" placeholder="검색어를 입력해주세요" id="search_input">
+                        <button type="button">검색</button>
+                    </div>
+                    <select>
+                        <option>매칭 신청서로 검색</option>
+                    </select>
+                </div>
+                <div class="search-list">
+                    <a href="#">[아이돌 5인조 모집]</a>
+                    <a href="#">배우 매칭서</a>
+                    <a href="#">화장품 모델 모집</a>
+                    <a href="#">드라마 주연 모집</a>
+                    <a href="#">영화 엑스트라 모집</a>
+                    <a href="#">화보 촬영 모집</a>
+                    <a href="#">아이돌 5인조 모집]</a>
+                </div>
+            </div>
+
+            <div class="util">
+                <!-- 로그인 전 -->
+                <div class="sign-box">
+                    <p>
+                        <!--<a sec:authorize="isAnonymous()"  th:href="@{/user/signup}">로그인 / 회원가입</a>-->
+                        <a sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a>
+                    </p>
+                </div>
+                <!-- 로그인 후 -->
+                <!--
+                <div class="status">
+                    <span class="point">200</span>
+                    <span class="star-point">200</span>
+                </div>
+                -->
+            </div>
+        </div>
+    </header>
+</th:block>
+</html>

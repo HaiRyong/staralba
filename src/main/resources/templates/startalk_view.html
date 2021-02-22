@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/sub_layout}">
+<th:block layout:fragment="content">
+    <div id="pages">
+        <div class="contents">
+            <div class="board">
+                <div class="layout">
+                    <div class="view">
+                        <div class="top">
+                            <h3 class="tit" th:text="${startalkDto.title}"></h3>
+                            <div class="txt">
+                                <span></span>
+                                <span th:text="'조회:'+${startalkDto.title}"></span>
+                                <span th:text="${startalkDto.author}"></span>
+                            </div>
+                            <div class="util-box">
+                                <button type="button" class="report">신고하기</button>
+                                <button type="button" class="like">추천 <em>345</em></button>
+                            </div>
+                        </div>
+                        <div class="bbs-content">
+                            <div class="txt-box" th:text="${startalkDto.content}"></div>
+                        </div>
+                        <div class="modify-box">
+                            <button type="button" class="delete-button button-outline-purple">글삭제</button>
+                            <button type="button" class="modify-button button-outline-pink">글수정</button>
+                            <input type="password" placeholder="비밀번호">
+                        </div>
+                        <div class="bottom">
+                            <a href="#" class="prev">이전 글</a>
+                            <a href="#" class="next">다음 글</a>
+                        </div>
+                        <div class="button-group">
+                            <a href="#" class="button button-outline-pink">목록</a>
+                        </div>
+                        <div class="reply-box">
+                            <p class="total">총 댓글<em class="color-pink">[1]</em></strong>
+                            <ul>
+                                <li>
+                                    <div class="txt">
+                                        안녕하세요 고객님 문의주신 사항에 대해 답변드립니다.<br>
+                                        먼저 어려움을 겪으셨을 상황에 대한 심심한 사과드립니다.
+                                    </div>
+                                    <div class="bottom-info">
+                                        <span>관리자</span>
+                                        <span>2020.12.28</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt">
+                                        안녕하세요 고객님 문의주신 사항에 대해 답변드립니다.<br>
+                                        먼저 어려움을 겪으셨을 상황에 대한 심심한 사과드립니다.
+                                    </div>
+                                    <div class="bottom-info">
+                                        <span>관리자</span>
+                                        <span>2020.12.28</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt">
+                                        안녕하세요 고객님 문의주신 사항에 대해 답변드립니다.<br>
+                                        먼저 어려움을 겪으셨을 상황에 대한 심심한 사과드립니다.
+                                    </div>
+                                    <div class="bottom-info">
+                                        <span>관리자</span>
+                                        <span>2020.12.28</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="reply-write">
+                                <p class="tit">댓글 쓰기</p>
+                                <textarea></textarea>
+                                <div class="bottom-group">
+                                    <input type="password" placeholder="비밀번호">
+                                    <button type="button" class="confirm-button button-outline-pink">댓글등록</button>
+                                </div>
+                                <p class="info-txt">음란물, 비하, 차별, 혐오 및 초상권, 저작권 침해 게시물은 민, 형사상의 책임을 질 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <address>
+            <p class="info1">
+                <span>(주)초코트리</span>
+                <span>(06121) 서울특별시 강남구 봉은사로 129, 1113호 (논현동, 거평타운)</span>
+            </p>
+            <p class="info2">
+                <span>대표 : 박건석</span>
+                <span>사업자등록번호 480 - 81 - 01960</span><br>
+                <span class="child3">통신판매업 신고번호 0000 - 00000</span>
+                <span>E-Mail :  chocotree_inc@naver.com </span><br>
+                <span class="child5">호스팅 사업자  :  (주)스마일서브 </span>
+                <span>고객센터 Tel :  02 - 3442 - 7176 (7177)</span>
+            </p>
+        </address>
+        <p class="copyright">Copyright chocotree_inc Service . All rights reserved.</p>
+    </footer>
+</th:block>
+</html>

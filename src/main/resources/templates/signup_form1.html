@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<th:block layout:fragment="content">
+    <div class="signup">
+        <div class="layout">
+            <h1 class="logo"><a href="#"><img src="../images/common/logo.svg" alt="staralba"></a></h1>
+            <div class="form">
+                <p class="txt"><span>회원정보</span>를 입력해주세요.</p>
+                <form name="signupForm" id="signupForm" th:action="@{/user/signup}" method="post" modelAttribute="memberDto">
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                    <fieldset>
+                        <dl class="field-box">
+                            <dt>아이디</dt>
+                            <dd>
+                                <div class="field">
+                                    <input type="text" id="userId" name="userId" placeholder="아이디 입력">
+                                    <button id="check_button" class="button check-button">중복확인</button>
+                                </div>
+                                <p class="info-txt"></p>
+                            </dd>
+                            <dt>비밀번호</dt>
+                            <dd>
+                                <div class="field">
+                                    <input type="password" id="password" name="password" placeholder="영문숫자 + 특수문자를 합한 12자리">
+                                </div>
+                                 <p class="info-txt" th:text="${valid_password}"></p>
+                             </dd>
+                             <dt>비밀번호 확인</dt>
+                             <dd>
+                                 <div class="field">
+                                    <input type="password" id="re_password" name="re_password" placeholder="영문숫자 + 특수문자를 합한 12자리">
+                                </div>
+                                 <p class="info-txt"></p>
+                             </dd>
+                        </dl>
+                    </fieldset>
+                </form>
+                <div class="terms-box">
+                    <p class="tit">약관동의</p>
+                    <p class="txt2">회원가입과 데이터 활용을 위한 동의사항 입니다.</p>
+                    <dl class="toggle-box2">
+                        <dt>
+                            <span class="checkbox-type2">
+                                <input type="checkbox" id="allcheck">
+                                <label for="allcheck">체크</label>
+                            </span>
+                            전체동의
+                        </dt>
+                        <dt>
+                            <span class="checkbox-type2">
+                                <input type="checkbox" id="chk1">
+                                <label for="chk1">체크</label>
+                            </span>
+                            약관 주요안내사항
+                            <button type="button">열기</button>
+                        </dt>
+                        <dd>
+                            제1조 (목적)<br><br>
+
+                            본 약관은 씨제이올리브네트웍스(주)(이하 "당사"라 함)가 제공하는 CJ ONE(이하 "CJ ONE"이라 함) 서비스 이용과 관련하여 당사와 회원의 제반 권리, 의무, 관련 절차 등을 규정하는데 그 목적이 있습니다.<br><br>
+
+
+                            제2조 (용어의 정의)<br><br>
+
+                            본 약관에서 사용하는 주요 용어의 정의는 다음과 같습니다.<br>
+                            ①CJ ONE 회원(이하 "회원"이라 함)이란 당사 또는 제휴사의 영업점이나 홈페이지를 통해 본 약관 제5조에 정해진 가입 절차에 따라 가입하여 정상적으로 CJ ONE 서비스를 이용할 수 있는 권한을 부여 받은 고객을 말합니다.<br>
+                            ②CJ ONE 카드(이하 "카드" 또는 문맥에 따라 "CJ ONE 카드"라 함)란 당사가 회원에게 발급하여 CJ ONE 서비스를 정상적으로 이용하도록 사용 승인한 카드(모바일카드 포함)로 일반 카드 (단순 포인트 적립 사용만 가능)는 물론 당사와 별도로 제휴카드 발급 계약을 맺은 피 계약사가 발행한 다양한 제휴 카드(신용카드를 포함하며 이하에서 “제휴 카드”라 함) 및 계열사별 별도 서비스 정책에 따라 발급된 카드를 모두 포함합니다.<br>
+                            ③CJ ONE 포인트(이하 "포인트"라 함)란 당사와 제휴사에서 재화/서비스 구매 시 적립/사용이 가능하도록 제공하는 포인트를 말합니다.<br>
+                            ④CJ ONE 제휴사(이하 "제휴사"라 함)란 당사와 CJ ONE 서비스 운영과 관련하여 제휴 계약을 맺고 CJ ONE 서비스를 공동 제공하기로 합의 한 회사로서 당해 회사의 영업점포 (이하 "제휴영업점"이라 함) 및 인터넷 사이트(이하 "서비스홈페이지"이라 함)를 포함합니다. 추후 제휴사는 당사 및 제휴사의 사정에 따라 추가 또는 서비스 계약 해지 될 수 있으며 CJ ONE홈페이지(www.cjone.com)를 통해 고지 합니다.
+                        </dd>
+                        <dt>
+                            <span class="checkbox-type2">
+                                <input type="checkbox" id="chk2">
+                                <label for="chk2">체크</label>
+                            </span>
+                            약관 주요안내사항
+                            <button type="button">열기</button>
+                        </dt>
+                        <dd>
+                            제1조 (목적)<br><br>
+
+                            본 약관은 씨제이올리브네트웍스(주)(이하 "당사"라 함)가 제공하는 CJ ONE(이하 "CJ ONE"이라 함) 서비스 이용과 관련하여 당사와 회원의 제반 권리, 의무, 관련 절차 등을 규정하는데 그 목적이 있습니다.<br><br>
+
+
+                            제2조 (용어의 정의)<br><br>
+
+                            본 약관에서 사용하는 주요 용어의 정의는 다음과 같습니다.<br>
+                            ①CJ ONE 회원(이하 "회원"이라 함)이란 당사 또는 제휴사의 영업점이나 홈페이지를 통해 본 약관 제5조에 정해진 가입 절차에 따라 가입하여 정상적으로 CJ ONE 서비스를 이용할 수 있는 권한을 부여 받은 고객을 말합니다.<br>
+                            ②CJ ONE 카드(이하 "카드" 또는 문맥에 따라 "CJ ONE 카드"라 함)란 당사가 회원에게 발급하여 CJ ONE 서비스를 정상적으로 이용하도록 사용 승인한 카드(모바일카드 포함)로 일반 카드 (단순 포인트 적립 사용만 가능)는 물론 당사와 별도로 제휴카드 발급 계약을 맺은 피 계약사가 발행한 다양한 제휴 카드(신용카드를 포함하며 이하에서 “제휴 카드”라 함) 및 계열사별 별도 서비스 정책에 따라 발급된 카드를 모두 포함합니다.<br>
+                            ③CJ ONE 포인트(이하 "포인트"라 함)란 당사와 제휴사에서 재화/서비스 구매 시 적립/사용이 가능하도록 제공하는 포인트를 말합니다.<br>
+                            ④CJ ONE 제휴사(이하 "제휴사"라 함)란 당사와 CJ ONE 서비스 운영과 관련하여 제휴 계약을 맺고 CJ ONE 서비스를 공동 제공하기로 합의 한 회사로서 당해 회사의 영업점포 (이하 "제휴영업점"이라 함) 및 인터넷 사이트(이하 "서비스홈페이지"이라 함)를 포함합니다. 추후 제휴사는 당사 및 제휴사의 사정에 따라 추가 또는 서비스 계약 해지 될 수 있으며 CJ ONE홈페이지(www.cjone.com)를 통해 고지 합니다.
+                        </dd>
+                    </dl>
+                </div>
+                <div class="button-box">
+                    <a href="#">회원가입 완료</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="toolbar">
+    <div class="star-app">
+        <div class="app-wrap">
+            <a href="#" class="app1 icon01">오늘의 알바스타</a>
+            <a href="#" class="app1 icon02">별사탕 가게</a>
+            <a href="#" class="app1 icon03">이벤트</a>
+            <a href="#" class="app1 icon04">공지사항</a>
+            <a href="#" class="app1 icon05">스타 톡</a>
+            <a href="#" class="app2"><span>배우</span></a>
+            <a href="#" class="app2"><span>모델</span></a>
+            <a href="#" class="app2"><span>음악</span></a>
+            <a href="#" class="app2"><span>공연<br>퍼포먼스</span></a>
+            <a href="#" class="app2"><span>MC<br>아나운서</span></a>
+            <a href="#" class="app2"><span>실버</span></a>
+        </div>
+    </div>
+    <div class="inner">
+        <a href="#" class="mypage">마이페이지</a>
+        <a href="#null" class="star"></a>
+        <a href="#" class="call-manager active">콜 매니저</a>
+    </div>
+</div>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        $(document).ready(function(){
+            $("#allcheck").click(function(){
+                if($("#allcheck").prop("checked")){
+                    $("#chk1").prop("checked", true);
+                    $("#chk2").prop("checked", true);
+                }else{
+                    $("#chk1").prop("checked", false);
+                    $("#chk2").prop("checked", false);
+                }
+
+            });
+            $("#chk1").click(function() {
+                if($("#chk1").prop("checked")) {
+                    if ($("#chk2").is(":checked")) {
+                        $("#allcheck").prop("checked", true);
+                    } else {
+                        $("#allcheck").prop("checked", false);
+                    }
+                }else{
+                    if ($("#allcheck").is(":checked")) {
+                        $("#allcheck").prop("checked", false);
+                    }
+                }
+            });
+            $("#chk2").click(function() {
+                if($("#chk2").prop("checked")) {
+                    if ($("#chk1").is(":checked")) {
+                        $("#allcheck").prop("checked", true);
+                    } else {
+                        $("#allcheck").prop("checked", false);
+                    }
+                }else{
+                    if ($("#allcheck").is(":checked")) {
+                        $("#allcheck").prop("checked", false);
+                    }
+                }
+            });
+            $(".button-box > a").click(function(e){
+                if(!$("#chk1").is(":checked")){
+                    alert("약관 주요안내사항을 동의해주세요.");
+                    $("#chk1").focus();
+                    return false;
+                }else if(!$("#chk2").is(":checked")){
+                    alert("약관 주요안내사항을 동의해주세요.");
+                    $("#chk1").focus();
+                    return false;
+                }else{
+                    $("#signupForm").submit();
+                }
+            });
+            //아이디 중복 체크
+            $('#check_button').click(function (e) {
+                e.preventDefault();
+                if($("#userId").val() ==""){
+                    alert("가입하실 아이디를 입력해주세요.");
+                    $("#userId").focus();
+                    return false;
+                }else{
+                    $.ajax({
+                        type: "GET",
+                        url: "idCheck",
+                        data: {
+                            "id": $('#userId').val()
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            if ($.trim(data) == "success") {
+                                $('.info-txt:first').removeClass("warning").addClass("success");
+                                $('.info-txt:first').text('사용 가능한 닉네임 입니다.');
+                            } else {
+                                $('.info-txt:first').removeClass("success").addClass("warning");
+                                $('.info-txt:first').text('이미 사용중인 ID 입니다. 다른 ID를 입력하세요.');
+                                $('#userId').val('');
+                                $('#userId').focus();
+                            }
+                        },
+                        error:function(request,status,error){
+                            alert("잠시 후 다시 시도해주세요.");
+                        }
+                    })
+                }
+            });
+            $("#re_password").keyup(function() {
+                if($("#password").val()!=""){
+                    if($("#re_password").val() != $("#password").val()){
+                        console.log( $('.info-txt:last'));
+                        $('.info-txt:last').removeClass("success").addClass("warning");
+                        $('.info-txt:last').text('1차 비밀번호와 다릅니다.');
+                    }else{
+                        $('.info-txt:last').removeClass("warning").addClass("success");
+                        $('.info-txt:last').text('1차 비밀번호와 같습니다.');
+                    }
+                }
+            })
+        });
+    /*]]>*/
+    </script>
+</th:block>
+</html>
+

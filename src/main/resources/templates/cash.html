@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>스타알바</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content=""/>
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<link rel="canonical" href="">
+<link rel="stortcut icon" href="/favicon.ico" type="image/x-icon">
+
+<script src="../js/jquery-1.12.4.min.js"></script>
+
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/commonui.css">
+<link rel="stylesheet" href="../css/slick.css">
+
+<script src="../js/commonui.js"></script>
+<script src="../js/slick.min.js"></script>
+<script src="../js/Modernizr.js"></script>
+
+<!--[if lt IE 9]>
+<script src="../js/html5shiv.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div id="wrap">
+    <header>
+        <div class="header-wrap layout">
+            <a href="/" class="logo"><img src="../images/common/logo.svg" alt="staralba"></a>
+            <div class="search-wrap">
+                <div class="search-box">
+                    <div class="input-box">
+                        <input type="text" placeholder="검색어를 입력해주세요" id="search_input">
+                        <button type="button">검색</button>
+                    </div>
+                    <select>
+                        <option>매칭 신청서로 검색</option>
+                    </select>
+                </div>
+                <div class="search-list">
+                    <a href="#">[아이돌 5인조 모집]</a>
+                    <a href="#">배우 매칭서</a>
+                    <a href="#">화장품 모델 모집</a>
+                    <a href="#">드라마 주연 모집</a>
+                    <a href="#">영화 엑스트라 모집</a>
+                    <a href="#">화보 촬영 모집</a>
+                    <a href="#">아이돌 5인조 모집]</a>
+                </div>
+            </div>
+
+            <div class="util">
+                <!-- 로그인 전 -->
+              <!--   <div class="sign-box">
+                    <p><a href="#">로그인 / 회원가입</a></p>
+                </div> -->
+                <!-- 로그인 후 -->
+
+                <div class="status">
+                    <span class="point">200</span>
+                    <span class="star-point">200</span>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div id="pages">
+        <div class="contents">
+            <div class="cash">
+                <div class="cash-tab tab-type1">
+                    <div class="layout">
+                        <a href="#null" rel="cash-con1" class="active">충전하기</a>
+                        <a href="#null" rel="cash-con2">결제 내역</a>
+                    </div>
+                </div>
+
+               <div class="cash-contents">
+                    <div id="cash-con1" class="cash-list">
+                       <div class="layout">
+                           <div class="cash-status">
+                               <div>
+                                   <p>스타포인트</p>
+                                   <span>2821</span>
+                               </div>
+                               <div>
+                                   <p>별사탕</p>
+                                   <span class="color-pink">2</span>
+                               </div>
+                           </div>
+                           <div class="cash-box">
+                                <div class="hgroup">
+                                    <h3>별사탕 가게를 찾아 주셔서 감사합니다.</h3>
+                                    <p>별사탕을 구매하시면 스타포인트를 보너스로 드립니다.</p>
+                                </div>
+                                <div class="charge">
+                                    <p class="tit">
+                                        충전 금액 선택
+                                        <span>별사탕 + 스타포인트는 [매칭]시 스타콜 및 콜 응답에 사용됩니다.</span>
+                                    </p>
+                                    <div class="list-group">
+                                        <div class="radio-cash">
+                                            <input type="radio" id="cash1" name="cash-radio">
+                                            <label for="cash1">
+                                                <div class="left">
+                                                    <div class="txt-box">
+                                                        <p class="txt1"><strong>10개</strong> 별사탕</p>
+                                                    </div>
+                                                </div>
+                                                <div class="right">
+                                                    <p class="price">
+                                                        <span class="discount">0 % 할인</span>
+                                                        <em>4,900</em>
+                                                    </p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="radio-cash">
+                                            <input type="radio" id="cash2" name="cash-radio">
+                                            <label for="cash2">
+                                                <div class="left">
+                                                    <div class="txt-box">
+                                                        <p class="txt1"><strong>20개</strong> 별사탕 <i>+</i></p>
+                                                        <p class="txt2"><strong>1000</strong> 스타포인트 </p>
+                                                    </div>
+                                                </div>
+                                                <div class="right">
+                                                    <p class="price">
+                                                        <span class="discount"><strong>5</strong> % 할인</span>
+                                                        <em>9,900</em>
+                                                    </p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="radio-cash">
+                                            <input type="radio" id="cash3" name="cash-radio">
+                                            <label for="cash3">
+                                                <div class="left">
+                                                    <div class="txt-box">
+                                                        <p class="txt1"><strong>60개</strong> 별사탕 <i>+</i></p>
+                                                        <p class="txt2"><strong>3000</strong> 스타포인트 </p>
+                                                    </div>
+                                                </div>
+                                                <div class="right">
+                                                    <p class="price">
+                                                        <span class="discount"><strong>10</strong> % 할인</span>
+                                                        <em>29,000</em>
+                                                    </p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="radio-cash">
+                                            <input type="radio" id="cash4" name="cash-radio">
+                                            <label for="cash4">
+                                                <div class="left">
+                                                    <div class="txt-box">
+                                                        <p class="txt1"><strong>100개</strong> 별사탕 <i>+</i></p>
+                                                        <p class="txt2"><strong>7500</strong> 스타포인트 </p>
+                                                    </div>
+                                                </div>
+                                                <div class="right">
+                                                    <p class="price">
+                                                        <span class="discount"><strong>15</strong> % 할인</span>
+                                                        <em>49,000</em>
+                                                    </p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="button-box">
+                                        <button type="button">충전하기</button>
+                                    </div>
+                                </div>
+                                 <div class="terms-box">
+                                    <p class="tit">환불 약관</p>
+                                    <div class="inner">
+                                        위 상품의 환불은 구매일로 부터 7일 이내 스타알바의 고객센터 문의를 통해 환불을 요청할 수 있습니다.<br>
+                                        단, 별사탕’ 혹은 스타포인트를 사용하거나 일부를 소비한 경우엔 환불 할 수 없습니다.<br><br>
+
+                                        별사탕의 유효기간은 구매일을 기준으로 5년이며, 스타포인트의 유효기간은 1년입니다. 유효기간이 만료되면 잔여 별사탕 및 스타포인트는 자동 소멸됩니다.<br><br>
+
+                                        스타알바 서비스 삭제나 회원의 자진 탈퇴 또는 강제 탈퇴로 인해 계약이 해지되는 경우, 회원이 보유한 별사탕, 스타포인트는 자동으로 소멸하여 복구 및 청약철회
+                                        진행이 불가능 합니다.
+                                        <br><br>
+
+                                        회사와 이용자(회원) 간에 발생한 분쟁은 전자거래기본법 제 32 조에 의거하여 설치된 기관인 전자거래 분쟁조정위원회의 조정에 따를 수 있습니다.
+                                        <br>
+                                        상기 표기되지 않은 환불의 규정은 “사이트”의 이용약관 제13조와  제14조의 환불규정을 참고하시기 바랍니다.
+
+                                    </div>
+                                </div>
+                           </div>
+                       </div>
+                    </div>
+                    <div id="cash-con2" class="cash-list">
+                        <div class="layout">
+                            <div class="cash-status">
+                               <div>
+                                   <p>스타포인트</p>
+                                   <span>2821</span>
+                               </div>
+                               <div>
+                                   <p>별사탕</p>
+                                   <span class="color-pink">2</span>
+                               </div>
+                            </div>
+                           <div class="history">
+                                <div class="hgroup">
+                                    <p class="tit">사용내역</p>
+                                    <div class="history-tab">
+                                        <a href="#null" rel="history1" class="active">스타포인트</a>
+                                        <a href="#null" rel="history2">별사탕</a>
+                                    </div>
+                                </div>
+                                <div class="history-contents">
+                                    <div id="history1" class="history-box">
+                                        <ul>
+                                            <li>
+                                                <div class="flex-box">
+                                                    <div class="left">
+                                                        <p class="date">2020.11.09</p>
+                                                        <p class="txt1">서비스 구매</p>
+
+                                                    </div>
+                                                    <div class="right">
+                                                        <p class="point color-yellow">-300</p>
+                                                        <p class="txt1">스타포인트</p>
+                                                    </div>
+                                                </div>
+                                                <p class="txt2">[SM Entertainment] 응답콜 </p>
+                                            </li>
+                                            <li>
+                                                <div class="flex-box">
+                                                    <div class="left">
+                                                        <p class="date">2020.11.09</p>
+                                                        <p class="txt1">서비스 구매</p>
+
+                                                    </div>
+                                                    <div class="right">
+                                                        <p class="point color-yellow">-300</p>
+                                                        <p class="txt1">스타포인트</p>
+                                                    </div>
+                                                </div>
+                                                <p class="txt2">[SM Entertainment] 응답콜 </p>
+                                            </li>
+                                            <li>
+                                                <div class="flex-box">
+                                                    <div class="left">
+                                                        <p class="date">2020.11.09</p>
+                                                        <p class="txt1">서비스 구매</p>
+
+                                                    </div>
+                                                    <div class="right">
+                                                        <p class="point color-yellow">-300</p>
+                                                        <p class="txt1">스타포인트</p>
+                                                    </div>
+                                                </div>
+                                                <p class="txt2">[SM Entertainment] 응답콜 </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="history2" class="history-box">
+                                        <ul>
+                                            <li>
+                                                <div class="flex-box">
+                                                    <div class="left">
+                                                        <p class="date">2020.11.09</p>
+                                                        <p class="txt1">서비스 구매</p>
+                                                    </div>
+                                                    <div class="right">
+                                                        <p class="point color-pink">-300</p>
+                                                        <p class="txt1">별사탕</p>
+                                                    </div>
+                                                </div>
+                                                 <p class="txt2">[SM Entertainment] 응답콜 </p>
+                                            </li>
+                                            <li>
+                                                <div class="flex-box">
+                                                    <div class="left">
+                                                        <p class="date">2020.11.09</p>
+                                                        <p class="txt1">서비스 구매</p>
+                                                    </div>
+                                                    <div class="right">
+                                                        <p class="point color-pink">-300</p>
+                                                        <p class="txt1">별사탕</p>
+                                                    </div>
+                                                </div>
+                                                 <p class="txt2">[SM Entertainment] 응답콜 </p>
+                                            </li>
+                                            <li>
+                                                <div class="flex-box">
+                                                    <div class="left">
+                                                        <p class="date">2020.11.09</p>
+                                                        <p class="txt1">서비스 구매</p>
+                                                    </div>
+                                                    <div class="right">
+                                                        <p class="point color-pink">-300</p>
+                                                        <p class="txt1">별사탕</p>
+                                                    </div>
+                                                </div>
+                                                 <p class="txt2">[SM Entertainment] 응답콜 </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    <footer>
+        <address>
+            <p class="info1">
+                <span>(주)초코트리</span>
+                <span>(06121) 서울특별시 강남구 봉은사로 129, 1113호 (논현동, 거평타운)</span>
+            </p>
+            <p class="info2">
+                <span>대표 : 박건석</span>
+                <span>사업자등록번호 480 - 81 - 01960</span><br>
+                <span class="child3">통신판매업 신고번호 0000 - 00000</span>
+                <span>E-Mail :  chocotree_inc@naver.com </span><br>
+                <span class="child5">호스팅 사업자  :  (주)스마일서브 </span>
+                <span>고객센터 Tel :  02 - 3442 - 7176 (7177)</span>
+            </p>
+        </address>
+        <p class="copyright">Copyright chocotree_inc Service . All rights reserved.</p>
+    </footer>
+</div>
+<div id="toolbar">
+    <div class="star-app">
+        <div class="app-wrap">
+            <a href="#" class="app1 icon01">오늘의 알바스타</a>
+            <a href="#" class="app1 icon02">별사탕 가게</a>
+            <a href="#" class="app1 icon03">이벤트</a>
+            <a href="#" class="app1 icon04">공지사항</a>
+            <a href="#" class="app1 icon05">스타 톡</a>
+            <a href="#" class="app2"><span>배우</span></a>
+            <a href="#" class="app2"><span>모델</span></a>
+            <a href="#" class="app2"><span>음악</span></a>
+            <a href="#" class="app2"><span>공연<br>퍼포먼스</span></a>
+            <a href="#" class="app2"><span>MC<br>아나운서</span></a>
+            <a href="#" class="app2"><span>실버</span></a>
+        </div>
+    </div>
+    <div class="inner">
+        <a href="#" class="mypage">마이페이지</a>
+        <a href="#null" class="star"></a>
+        <a href="#" class="call-manager active">콜 매니저</a>
+    </div>
+</div>
+</body>
+<script>
+    $(".cash-contents .cash-list").hide();
+    $(".cash-contents .cash-list:first-child").show();
+    $(".cash-tab a").on('click',function () {
+        $(".cash-tab a").removeClass("active");
+        $(this).addClass("active");
+        $(".cash-contents .cash-list").hide();
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn('fast');
+    });
+
+    $(".history-contents .history-box").hide();
+    $(".history-contents .history-box:first-child").show();
+    $(".history-tab a").on('click',function () {
+        $(".history-tab a").removeClass("active");
+        $(this).addClass("active");
+        $(".history-contents .history-box").hide();
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn('fast');
+    });
+</script>
+</html>

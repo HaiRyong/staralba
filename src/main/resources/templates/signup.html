@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<th:block layout:fragment="content">
+    <div class="signup">
+        <div class="layout">
+            <h1 class="logo"><a href="#"><img src="../images/common/logo.svg" alt="staralba"></a></h1>
+            <div class="box" >
+                <p class="txt"><span>회원 종류</span>를 선택해주세요.</p>
+                <div class="button-group">
+                     <button id="member_signup" class="button pink"><i><img src="../images/contents/signup_icon01.png" alt=""></i>개인회원</button>
+                     <button id="enterprise_signup" class="button"><i><img src="../images/contents/signup_icon02.png" alt=""></i>기업회원</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        $(document).ready(function(){
+            $("#member_signup").click(function(){
+                location.href ="/user/signupForm";
+            });
+            $("#enterprise_signup").click(function(){
+                location.href ="/enterprise/signup";
+            });
+        });
+        /*]]>*/
+    </script>
+</th:block>
+</html>

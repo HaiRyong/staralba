@@ -1,0 +1,45 @@
+<!doctype html>
+<html lagn="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <title>스타알바</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content=""/>
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <link rel="canonical" href="">
+    <link rel="stortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <script src="../js/jquery-1.12.4.min.js"></script>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/commonui.css">
+    <link rel="stylesheet" href="../css/slick.css">
+
+    <script src="../js/commonui.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/Modernizr.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="wrap">
+        <!-- content fragment  -->
+        <th:block layout:fragment="content"></th:block>
+    </div>
+    <!-- footer fragment -->
+    <div id="toolbar" th:replace="/fragments/footer/footer.html :: footerFragment"></div>
+</body>
+</html>

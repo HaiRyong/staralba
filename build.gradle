@@ -6,7 +6,7 @@ plugins {
 
 group = 'co.kr.staralba'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 configurations {
     compileOnly {
@@ -18,16 +18,48 @@ repositories {
     mavenCentral()
 }
 
+// QueryDSL Version
+def queryDSLVersion = '4.2.2'
+// QueryDSL PATH
+def generated = "src/main/generated"
+
 dependencies {
+    //jpa
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    //security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    // validation 추가
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    //thymeleaf
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.4.1'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+    //lombok
     compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.projectlombok:lombok'
+    // QueryDSL - DSL(Domain Specific Language)
+    compile("com.querydsl:querydsl-core:${queryDSLVersion}")
+    compile("com.querydsl:querydsl-jpa:${queryDSLVersion}")
+    compile("com.querydsl:querydsl-apt:${queryDSLVersion}")
+    compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity5', version: '3.0.4.RELEASE'
+
     runtimeOnly 'mysql:mysql-connector-java'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor(
+            "com.querydsl:querydsl-apt:${queryDSLVersion}:jpa",
+            "org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final",
+            "javax.annotation:javax.annotation-api",
+            "org.projectlombok:lombok"
+    )
+    //mysql
+    runtimeOnly 'mysql:mysql-connector-java'
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
 }
 
 test {

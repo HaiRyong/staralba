@@ -1,0 +1,863 @@
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{layouts/main_layout}">
+<th:block layout:fragment="header">
+    <header>
+        <div class="header-wrap layout">
+            <a href="/" class="logo"><img src="../images/common/logo.svg" alt="staralba"></a>
+            <div class="search-wrap">
+                <div class="search-box">
+                    <div class="input-box">
+                        <input type="text" placeholder="검색어를 입력해주세요" id="search_input">
+                        <button type="button">검색</button>
+                    </div>
+                    <select>
+                        <option>매칭 신청서로 검색</option>
+                    </select>
+                </div>
+                <div class="search-list">
+                    <a href="#">[아이돌 5인조 모집]</a>
+                    <a href="#">배우 매칭서</a>
+                    <a href="#">화장품 모델 모집</a>
+                    <a href="#">드라마 주연 모집</a>
+                    <a href="#">영화 엑스트라 모집</a>
+                    <a href="#">화보 촬영 모집</a>
+                    <a href="#">아이돌 5인조 모집]</a>
+                </div>
+            </div>
+
+            <div class="util">
+                <!-- 로그인 전 -->
+                <div class="sign-box">
+                    <p>
+                        <a sec:authorize="isAnonymous()"  th:href="@{/user/login}">로그인 / 회원가입</a>
+                    </p>
+                </div>
+                <!-- 로그인 후 -->
+                <!--
+                <div class="status">
+                    <span class="point">200</span>
+                    <span class="star-point">200</span>
+                </div>
+                -->
+            </div>
+        </div>
+    </header>
+</th:block>
+<th:block layout:fragment="content">
+    <div id="main">
+        <div class="main-slide">
+            <div class="tab tab-type1">
+                <div class="layout">
+                    <a href="#null" rel="slide1" class="active">추천 스타</a>
+                    <a href="#null" rel="slide2">오늘의 알바 스타</a>
+                    <a href="#null" rel="slide3">스타알바tv</a>
+                    <a href="#null" rel="slide4">스타톡</a>
+                </div>
+            </div>
+
+            <div class="tab-slide">
+                <div class="layout">
+                    <div id="slide1" class="main-slick slide-contents">
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                    </div>
+                    <div id="slide2" class="main-slick  slide-contents">
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                        <div><a href="#"><img src="https://via.placeholder.com/400x400.png?text=Images" alt=""></a></div>
+                    </div>
+                    <div id="slide3" class="star-tv slide-contents">
+                        <div class="video-box">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="slide4" class="star-talk slide-contents">
+                        <ul class="list">
+                            <li>
+                                <a href="#">
+                                    <em>123</em>
+                                    <div>
+                                        <p class="tit">마이 페이지 신 기능 추가</p>
+                                        <p class="bottom">
+                                            <span class="date">2020.12.28</span>
+                                            <span class="count">조회 : 120</span>
+                                        </p>
+                                    </div>
+                                    <span class="reply-count">[2]</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>123</em>
+                                    <div>
+                                        <p class="tit">마이 페이지 신 기능 추가</p>
+                                        <p class="bottom">
+                                            <span class="date">2020.12.28</span>
+                                            <span class="count">조회 : 120</span>
+                                        </p>
+                                    </div>
+                                    <span class="reply-count">[2]</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>123</em>
+                                    <div>
+                                        <p class="tit">마이 페이지 신 기능 추가</p>
+                                        <p class="bottom">
+                                            <span class="date">2020.12.28</span>
+                                            <span class="count">조회 : 120</span>
+                                        </p>
+                                    </div>
+                                    <span class="reply-count">[2]</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>123</em>
+                                    <div>
+                                        <p class="tit">마이 페이지 신 기능 추가</p>
+                                        <p class="bottom">
+                                            <span class="date">2020.12.28</span>
+                                            <span class="count">조회 : 120</span>
+                                        </p>
+                                    </div>
+                                    <span class="reply-count">[2]</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>123</em>
+                                    <div>
+                                        <p class="tit">마이 페이지 신 기능 추가</p>
+                                        <p class="bottom">
+                                            <span class="date">2020.12.28</span>
+                                            <span class="count">조회 : 120</span>
+                                        </p>
+                                    </div>
+                                    <span class="reply-count">[2]</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>123</em>
+                                    <div>
+                                        <p class="tit">마이 페이지 신 기능 추가</p>
+                                        <p class="bottom">
+                                            <span class="date">2020.12.28</span>
+                                            <span class="count">조회 : 120</span>
+                                        </p>
+                                    </div>
+                                    <span class="reply-count">[2]</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>123</em>
+                                    <div>
+                                        <p class="tit">마이 페이지 신 기능 추가</p>
+                                        <p class="bottom">
+                                            <span class="date">2020.12.28</span>
+                                            <span class="count">조회 : 120</span>
+                                        </p>
+                                    </div>
+                                    <span class="reply-count">[2]</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>123</em>
+                                    <div>
+                                        <p class="tit">마이 페이지 신 기능 추가</p>
+                                        <p class="bottom">
+                                            <span class="date">2020.12.28</span>
+                                            <span class="count">조회 : 120</span>
+                                        </p>
+                                    </div>
+                                    <span class="reply-count">[2]</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <em>123</em>
+                                    <div>
+                                        <p class="tit">마이 페이지 신 기능 추가</p>
+                                        <p class="bottom">
+                                            <span class="date">2020.12.28</span>
+                                            <span class="count">조회 : 120</span>
+                                        </p>
+                                    </div>
+                                    <span class="reply-count">[2]</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="button-box">
+                            <a href="#">더보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-star">
+            <div class="star-tab tab-type1">
+                <div class="layout">
+                     <a href="#null" class="active" rel="star-tab1">스타 콜</a>
+                     <a href="#null" rel="star-tab2">마이 스타</a>
+                </div>
+
+            </div>
+             <div class="main-starbox">
+                <div id="star-tab1" class="star-container">
+                    <div class="signin-box">
+                        <strong>
+                            회원 가입 및<br>
+                            <em class="color-pink">로그인</em> 을 해주세요.
+                        </strong>
+                        <a th:href="@{/user/login}">로그인 및 회원가입</a>
+                   </div>
+                </div>
+                <div id="star-tab2" class="star-container">
+                    <div class="mystar">
+                        <div class="layout">
+                            <div class="match-box">
+                                <button type="button" class="toggle-match">매칭 신청서 펼치기</button>
+                                <div class="match-list">
+                                    <a href="#" class="new-match">새 매칭 신청하기</a>
+                                    <a href="#">영화 액스트라 모집합니다.</a>
+                                    <a href="#">화장품 전속 모델 모집합니다.</a>
+                                    <a href="#">데뷔조 5인조 걸그룹 </a>
+                                    <a href="#">영화 액스트라 모집합니다.</a>
+                                    <a href="#">화장품 전속 모델 모집합니다.</a>
+                                    <a href="#">데뷔조 5인조 걸그룹</a>
+                                </div>
+                            </div>
+                            <div class="mystar-box">
+                                <div class="mystar-tab tab-type3">
+                                    <div class="inner">
+                                        <a href="#null" rel="group1" class="active">그룹1</a>
+                                        <a href="#null" rel="group2">그룹2</a>
+                                        <a href="#null" rel="group3">그룹3</a>
+                                        <a href="#null" rel="group4">그룹4</a>
+                                    </div>
+                                </div>
+                                <div class="mystar-wrap">
+                                    <div class="list-top">
+                                            <span>인원 : 102명</span>
+                                            <div class="button-box">
+                                                <button type="button" class="button-outline-pink">삭제</button>
+
+                                            </div>
+                                        </div>
+                                    <div class="mystar-contents">
+                                        <div id="group1" class="list">
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="group2" class="list">
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="group3" class="list">
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="group4" class="list">
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="img">
+                                                    <img src="../images/@draft/mystar.png" alt="김재훈">
+                                                </p>
+                                                <div class="info-box">
+                                                    <p class="info1">
+                                                        <span><em>25</em>세</span>
+                                                        <span><em>180</em>cm</span>
+                                                        <span><em>78</em>kg</span>
+                                                    </p>
+                                                    <p class="name">김재훈<em>모델</em></p>
+                                                    <a href="#">상세보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <address>
+            <p class="info1">
+                <span>(주)초코트리</span>
+                <span>(06121) 서울특별시 강남구 봉은사로 129, 1113호 (논현동, 거평타운)</span>
+            </p>
+            <p class="info2">
+                <span>대표 : 박건석</span>
+                <span>사업자등록번호 480 - 81 - 01960</span><br>
+                <span class="child3">통신판매업 신고번호 0000 - 00000</span>
+                <span>E-Mail :  chocotree_inc@naver.com </span><br>
+                <span class="child5">호스팅 사업자  :  (주)스마일서브 </span>
+                <span>고객센터 Tel :  02 - 3442 - 7176 (7177)</span>
+            </p>
+        </address>
+        <p class="copyright">Copyright chocotree_inc Service . All rights reserved.</p>
+    </footer>
+</div>
+</th:block>
+</html>

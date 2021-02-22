@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<th:block layout:fragment="content">
+    <div class="signin">
+        <div class="layout">
+            <h1 class="logo"><a href="#"><img src="../images/common/logo.svg" alt="staralba"></a></h1>
+            <div class="box">
+                <form id="loginForm" action="/user/login" method="post">
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                    <fieldset>
+                        <dl>
+                            <dt>아이디를 입력해 주세요.</dt>
+                            <dd>
+                                <input type="text" name="userId" id="userId" placeholder="">
+                                <p class="warning-txt"></p>
+                            </dd>
+                            <dt>비밀번호를 입력해 주세요.</dt>
+                            <dd>
+                                <input type="password" name="password" id="password">
+                                <p class="warning-txt" th:if="${param.error}">
+                                    아이디나 비밀번호를 확인해주세요.
+                                </p>
+                            </dd>
+                        </dl>
+                    </fieldset>
+                <div class="button-box">
+                    <button type="submit" id="login_button" class="button">로그인</button>
+                    <a th:href="@{/user/signup}" type="button" class="button">회원가입</a>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        $(document).ready(function(){
+            $("#login_button").click(function(e){
+                if($("#userId").val()=="") {
+                    alert("아이디를 입력해주세요.");
+                    $("#userId").focus();
+                    return false;
+                }
+                if($("#password").val()=="") {
+                    alert("아이디를 입력해주세요.");
+                    $("#password").focus();
+                    return false;
+                }
+                $("#loginForm").submit();
+            });
+        });
+        /*]]>*/
+    </script>
+</th:block>
+</html>
